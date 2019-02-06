@@ -13,6 +13,7 @@ export class BlogpostListComponent implements OnInit {
   error: {};
   
   dataArray: any;
+  imgArray: any;
 
   constructor(
     private titleServices: Title,
@@ -22,10 +23,15 @@ export class BlogpostListComponent implements OnInit {
   ngOnInit() {
     this.titleServices.setTitle(this.title);
     this.dataArray = [];
+    this.imgArray = [];
     this.BlogpostService.getBlogs()
     .subscribe(res => {
-      console.log(res)
       this.dataArray = res;
+    })
+
+    this.BlogpostService.getBlogsImg()
+    .subscribe(res => {
+      this.imgArray = res;
     })
   }
 

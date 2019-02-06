@@ -21,6 +21,12 @@ export class BlogpostService {
     );
   }
 
+  getBlogsImg() {
+    return this.http.get<Blogpost>(this.ServerUrl + 'albums/1/photos').pipe(
+      catchError(this.handleError)
+    );
+  }
+
   getFeaturedBlogs(userId) {
     return this.http.get<Blogpost>(this.ServerUrl + `posts/${userId}`).pipe(
       catchError(this.handleError)
