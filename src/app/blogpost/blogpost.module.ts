@@ -7,11 +7,13 @@ import { BlogpostListComponent } from './blogpost-list/blogpost-list.component';
 import { BlogpostDetailComponent } from './blogpost-detail/blogpost-detail.component';
 import { BlogpostRecentComponent } from './blogpost-recent/blogpost-recent.component';
 import { CategoriesComponent } from './categories/categories.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   imports: [
     CommonModule,
-    BlogpostRoutingModule
+    BlogpostRoutingModule,
+    NgxPaginationModule
   ],
   exports: [
     BlogpostFeaturedComponent

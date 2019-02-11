@@ -8,6 +8,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./blogpost-list.component.css']
 })
 export class BlogpostListComponent implements OnInit {
+  p: number = 1;
   title = 'Blog';
   // blogs: Blogpost;
   error: {};

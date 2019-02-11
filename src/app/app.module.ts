@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BlogpostService } from './blogpost/blogpost.service';
+import {NgxPaginationModule} from 'ngx-pagination';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +20,7 @@ import { BlogpostService } from './blogpost/blogpost.service';
     FooterComponent,
     BannerComponent,
     PageNotFoundComponent
+    
   ],
   imports: [
 
@@ -25,7 +28,8 @@ import { BlogpostService } from './blogpost/blogpost.service';
     HttpClientModule,
     BlogpostModule,
     CmspageModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxPaginationModule
   ],
   providers: [Title, BlogpostService],
   bootstrap: [AppComponent]

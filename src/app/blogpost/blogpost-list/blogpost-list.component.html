@@ -3,7 +3,7 @@
   <div class="container">
     <h1>{{title}}</h1>
     <div class="row">
-      <div class="col-md-4 mb-5" *ngFor="let data of dataArray; let index = index;">
+      <div class="col-md-4 mb-5" *ngFor="let data of dataArray | paginate: { itemsPerPage: 6, currentPage: p, totalItems: total} let index = index;">
         <div class="blog-box">
           <h5 title="{{data.title}}">{{data.title}}</h5>
           <h6>User ID: {{data.id}}</h6>
@@ -14,5 +14,7 @@
         </div>
       </div>
     </div>
+
+    <pagination-controls (pageChange)="p = $event" class="my-pagination"></pagination-controls>
   </div>
 </section>

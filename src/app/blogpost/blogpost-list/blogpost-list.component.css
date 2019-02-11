@@ -1,5 +1,10 @@
 h5 {
-    white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.my-pagination /deep/ .ngx-pagination {text-align: right;}
+.my-pagination /deep/ .ngx-pagination .current {
+  background: green;
 }
